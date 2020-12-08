@@ -22,8 +22,8 @@
     <p class="api">
       <label class="method method-${interface.method}">${interface.method|escape2}</label>
       <code class="path">${interface.path|escape2}{if interface.method === 'GET' && interface.params.inputs.length >
-        0}?{list interface.params.inputs as input}{if input_index !== 0}&{/if}${input.name + '=' +
-        input.defaultValue}{/list}{/if}</code>
+        0}?{list interface.params.inputs as input}{if input_index !== 0}&{/if}${input.name}=
+        ${input.defaultValue}{/list}{/if}</code>
     </p>
     {if interface.params.reqHeaders.length>0}
     <h5>请求头</h5>

@@ -1,47 +1,50 @@
 module.exports = {
   salt: '0sY7fh6;wMt',
-  sendNotification: true,
+  sendNotification: false,
   logger: {
-    level: 'info',
+    level: 'debug',
     root: './logs/'
   },
-  testDomain: 'https://neitestfake.netease.com',
-  onlineDomain: 'https://nei.netease.com',
+  testDomain: 'https://nei.mxsyx.site',
+  onlineDomain: 'https://nei.mxsyx.site',
   mysql: {
-    host: '127.0.0.1',
+    host: 'mysql',
     port: 3306,
     user: 'root',
-    password: '123456',
-    database: 'nei-test',
+    password: 'root',
+    database: 'nei',
     connectionLimit: 100,
     dateStrings: true,
     charset: 'UTF8MB4_GENERAL_CI'
   },
   mongodb: {
-    url: 'mongodb://127.0.0.1:27017',
+    url: 'mongodb://mongodb:27017',
     options: {
       useNewUrlParser: true
     },
-    name: 'nei_local',
-    key: 'test_'
+    name: 'nei',
+    key: 'nei_'
   },
   redis: {
-    key: 'test_',
-    host: '127.0.0.1',
+    key: 'nei_',
+    db: 10,
+    host: 'redis',
     port: '6379',
     expire: 2678400,
-    password: ''
+    password: 'sOmE_sEcUrE_pAsS'
   },
+  // ip 地址查询服务
   ip: {
     disabled: true
   },
   mail: {
     disabled: true
   },
-  nos: {},
-  static: {
-    defer: false,
-    maxage: 2.592e9
+  nos: {
+    server: ''
   },
-  mysqlLog: false
+  static: {
+    defer: true
+  },
+  mysqlLog: true
 };
