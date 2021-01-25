@@ -757,7 +757,6 @@
 .markdown-body-doc table td {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
   text-align: left;
 }
 
