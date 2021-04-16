@@ -1,6 +1,6 @@
 FROM node:8-alpine
 
-WORKDIR /appops
+WORKDIR /nei
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
@@ -11,7 +11,7 @@ RUN npm config set registry https://registry.npm.taobao.org
 
 RUN npm install nej -g
 
-COPY . /appops
+COPY . /nei
 
 RUN npm install
 
